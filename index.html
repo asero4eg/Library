@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson 18</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Books that I have lent to friends</h1>
+    </header>
+    <main id="main">
+        <div class="content-wrapper" id="content">
+            <div class="book-list-info">
+                <div class="total-book-info">You have lent <span id="bookNumber">0</span> books to friends</div>
+                <div class="book-lent-to">Lent to:</div>
+            </div>
+        </div>
+        <div class="pop-holder add-book" id="addPopWindow">
+            <div class="pop-content">
+                <div class="pop-header">Some text</div>
+                <div class="pop-values">
+                    <input type="text" id="addBookTitle" placeholder="Book title">
+                    <input type="text" id="addBookAuthor" placeholder="Book author">
+                    <input type="text" id="addFriendName" placeholder="Friend name">
+                    <input type="text" id="addDate" placeholder="Until">
+                </div>
+                <button class="save-button" id="saveBook">Save</button>
+                <button class="cancel-button" id="addCancel">Cancel</button>
+            </div>
+        </div>
+        <div class="pop-holder book-settings" id="setPopWindow">
+            <div class="pop-content">
+                <div class="pop-header">Some text</div>
+                <div class="pop-values">
+                    <span class="info">Book title: <span id="settingBookTitle"></span></span>
+                    <span class="info">Book author: <span id="settingBookAuthor"></span></span>
+                    <span class="info">Friend name: <span id="settingFriendName"></span></span>
+                </div>
+                <div><input id="check" type="checkbox"><span class="check-text">Book returned</span></div>
+                <button id="settingSaveButton" class="save-button">Save</button>
+                <button class="cancel-button" onclick="hideSettings()" id="editCancel">Cancel</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="lent"><span id="showButton">+ Lent a new book away</span></div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
