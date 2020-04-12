@@ -6,6 +6,8 @@
     <title>Lesson 18</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -21,35 +23,48 @@
         </div>
         <div class="pop-holder add-book" id="addPopWindow">
             <div class="pop-content">
-                <div class="pop-header">Some text</div>
+                <div class="pop-header">
+                    <p>Lent book</p>
+                </div>
                 <div class="pop-values">
                     <input type="text" id="addBookTitle" placeholder="Book title">
                     <input type="text" id="addBookAuthor" placeholder="Book author">
                     <input type="text" id="addFriendName" placeholder="Friend name">
-                    <input type="text" id="addDate" placeholder="Until">
+                    <input type="text" id="addDate">
                 </div>
-                <button class="save-button" id="saveBook">Save</button>
-                <button class="cancel-button" id="addCancel">Cancel</button>
+                <div class="button-container">
+                    <button class="save-button" id="saveBook">Save</button>
+                    <button class="cancel-button" id="addCancel">Cancel</button>
+                </div>
             </div>
         </div>
         <div class="pop-holder book-settings" id="setPopWindow">
             <div class="pop-content">
-                <div class="pop-header">Some text</div>
+                <div class="pop-header">
+                    <p>Book info</p>
+                </div>
                 <div class="pop-values">
                     <span class="info">Book title: <span id="settingBookTitle"></span></span>
                     <span class="info">Book author: <span id="settingBookAuthor"></span></span>
                     <span class="info">Friend name: <span id="settingFriendName"></span></span>
+                    <span class="info">Period: <span id="settingDate"></span></span>
                 </div>
-                <div><input id="check" type="checkbox"><span class="check-text">Book returned</span></div>
-                <button id="settingSaveButton" class="save-button">Save</button>
-                <button class="cancel-button" onclick="hideSettings()" id="editCancel">Cancel</button>
+                <div class="check-container"><input id="check" type="checkbox"><span class="check-text">Book
+                        returned</span></div>
+                <div class="button-container">
+                    <button id="settingSaveButton" class="save-button">Save</button>
+                    <button class="cancel-button" onclick="hideSettings()" id="editCancel">Cancel</button>
+                </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="lent"><span id="showButton">+ Lent a new book away</span></div>
+        <div class="lent"><span id="showButton"><span class="icon-plus"></span> Lent a new book away</span></div>
     </footer>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="script.js"></script>
 
 </html>
